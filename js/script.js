@@ -13,13 +13,21 @@ function handleFormSubmit(event) {
   xhr.open("POST", url, true);
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
-      // Redirect to the thank-you page
+      // Manually redirect to the thank-you page
       window.location.href = "thankyou.html";
     }
   };
   xhr.send(formData);
 }
 
-// Attach the form submission event handler
-var form = document.querySelector(".article__form");
-form.addEventListener("submit", handleFormSubmit);
+document.addEventListener("DOMContentLoaded", function () {
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://api.ipify.org?format=json", true);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      var data = JSON.parse(xhr.responseText);
+      document.getElementById("ip-input").value = data.ip;
+    }
+  };
+  xhr.send();
+});
