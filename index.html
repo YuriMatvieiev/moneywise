@@ -114,23 +114,48 @@
       <form
         class="article__form"
         method="POST"
-        action="https://script.google.com/macros/s/AKfycbxE7sTteOT3mqyf8XMX0EhLGYgnJIgHvgd42Rvg-hvd53bkpsbeSDR1Ggz6Q5GnU_EZrA/exec"
+        action="https://script.google.com/macros/s/AKfycbzzT9-yGri-GvI_sqElEDd5oK5bthU_NjGafvcJfkpbCtWiXAC8CYCaH9NmYBQliuvyxQ/exec"
       >
-        <h2>Get Free Email Updates!</h2>
-        <h4>Join us for FREE to get instant email updates!</h4>
-        <input
-          type="text"
-          placeholder="First Name"
-          name="first_name"
-          required
-        />
-        <input type="text" placeholder="Last Name" name="last_name" required />
-        <input type="email" placeholder="Email Address" name="email" required />
-        <input type="hidden" name="ip" id="ip-input" />
-        <input type="hidden" name="custom" value="site1" id="custom-input" />
-        <button type="submit">Get Access Today!</button>
+        <div class="article__main-form">
+          <h2>Get Free Email Updates!</h2>
+          <h4>Join us for FREE to get instant email updates!</h4>
+          <input
+            type="text"
+            placeholder="First Name"
+            name="first_name"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Last Name"
+            name="last_name"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email Address"
+            name="email"
+            required
+          />
+          <input type="hidden" name="ip" id="ip-input" />
+          <input type="hidden" name="custom" value="site1" id="custom-input" />
+          <button type="submit">Get Access Today!</button>
+        </div>
+        <div class="article__thankyou" style="display: none">THANK YOU!</div>
       </form>
+      <!-- Insert your pixel code here -->
+      <iframe src="your_pixel_url" style="display: none"></iframe>
 
+      <script>
+        document
+          .querySelector(".article__form")
+          .addEventListener("submit", function () {
+            var pixel = document.createElement("iframe");
+            pixel.src = "your_pixel_url";
+            pixel.style.display = "none";
+            document.body.appendChild(pixel);
+          });
+      </script>
       <h3>Get cash back for storing your money smarter</h3>
       <p>
         When was the last time you asked yourself what your debit card was doing
