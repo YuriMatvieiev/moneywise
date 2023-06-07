@@ -144,14 +144,18 @@
         <div class="article__thankyou" style="display: none">THANK YOU!</div>
       </form>
       <!-- Insert your pixel code here -->
-      <iframe src="your_pixel_url" style="display: none"></iframe>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-537X2HZ"
+        style="display: none"
+      ></iframe>
 
       <script>
         document
           .querySelector(".article__form")
           .addEventListener("submit", function () {
             var pixel = document.createElement("iframe");
-            pixel.src = "your_pixel_url";
+            pixel.src =
+              "https://www.googletagmanager.com/ns.html?id=GTM-537X2HZ";
             pixel.style.display = "none";
             document.body.appendChild(pixel);
           });
@@ -162,6 +166,70 @@
         for you? Traditional banks rarely offer you incentives to use your card
         — in fact, it’s more likely they’re dinging you with hidden fees.
       </p>
+      <form
+        class="article__form"
+        method="POST"
+        action="https://script.google.com/macros/s/AKfycbzzT9-yGri-GvI_sqElEDd5oK5bthU_NjGafvcJfkpbCtWiXAC8CYCaH9NmYBQliuvyxQ/exec"
+      >
+        <div class="article__main-form">
+          <h2>Get Free Email Updates!</h2>
+          <h4>Join us for FREE to get instant email updates!</h4>
+          <input
+            type="text"
+            placeholder="First Name"
+            name="first_name"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Last Name"
+            name="last_name"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email Address"
+            name="email"
+            required
+          />
+          <input type="hidden" name="ip" id="ip-input" />
+          <input type="hidden" name="custom" value="site1" id="custom-input" />
+          <button type="submit">Get Access Today!</button>
+        </div>
+        <div class="article__thankyou" style="display: none">THANK YOU!</div>
+      </form>
+      <form
+        class="article__form"
+        method="POST"
+        action="https://script.google.com/macros/s/AKfycbzzT9-yGri-GvI_sqElEDd5oK5bthU_NjGafvcJfkpbCtWiXAC8CYCaH9NmYBQliuvyxQ/exec"
+      >
+        <div class="article__main-form">
+          <h2>Get Free Email Updates!</h2>
+          <h4>Join us for FREE to get instant email updates!</h4>
+          <input
+            type="text"
+            placeholder="First Name"
+            name="first_name"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Last Name"
+            name="last_name"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Email Address"
+            name="email"
+            required
+          />
+          <input type="hidden" name="ip" id="ip-input" />
+          <input type="hidden" name="custom" value="site1" id="custom-input" />
+          <button type="submit">Get Access Today!</button>
+        </div>
+        <div class="article__thankyou" style="display: none">THANK YOU!</div>
+      </form>
       <p>
         With <a href="#">Aspiration</a>, you get to choose how much you want to
         pay, even if that’s $0 a month. And if you need an extra service like a
