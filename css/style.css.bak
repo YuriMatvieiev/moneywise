@@ -1,13 +1,19 @@
+@charset "UTF-8";
+/* Указываем box sizing */
 *,
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
+
+/* Убираем внутренние отступы */
 ul[class],
 ol[class] {
   padding: 0;
 }
+
+/* Убираем внешние отступы */
 body,
 h1,
 h2,
@@ -24,50 +30,64 @@ dl,
 dd {
   margin: 0;
 }
+
+/* Выставляем основные настройки по-умолчанию для body */
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],
 ol[class] {
   list-style: none;
 }
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
-  text-decoration-skip-ink: auto;
+          text-decoration-skip-ink: auto;
 }
+
+/* Упрощаем работу с изображениями */
 img {
   max-width: 100%;
   display: block;
 }
+
+/* Указываем понятную периодичность в потоке данных у article*/
 article > * + * {
   margin-top: 1em;
 }
+
+/* Наследуем шрифты для инпутов и кнопок */
 input,
 button,
 textarea,
 select {
   font: inherit;
 }
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 @media (prefers-reduced-motion: reduce) {
   * {
     -webkit-animation-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
-    animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     -webkit-transition-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
 body {
   font-size: 20px;
   line-height: 30px;
-  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+
 .header__top {
   padding: 8px 24px;
   font-size: 14px;
@@ -84,9 +104,10 @@ body {
   padding: 10px 0;
 }
 .header__img a img {
-  height: 35px;
+  height: 50px;
   display: inline-block;
 }
+
 .article {
   max-width: 768px;
   margin: 36px auto;
@@ -114,19 +135,19 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .article__box-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .article__autor-img {
   margin-right: 10px;
@@ -184,7 +205,7 @@ body {
   color: #3139e3;
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 0.11111111rem solid rgba(0, 0, 0, 0);
+  border-bottom: 0.11111111rem solid transparent;
   margin-bottom: 30px;
   display: inline-block;
 }
@@ -206,15 +227,15 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .article__main-form h2,
 .article__main-form h4 {
@@ -233,7 +254,7 @@ body {
   font-size: 18px;
   padding: 11px 10px;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 .article__main-form button {
   background-color: #ec8b34;
@@ -245,7 +266,7 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 @media (any-hover: hover) {
   .article__main-form button:hover {
@@ -263,6 +284,7 @@ body {
   padding: 25px;
   border-radius: 10px;
 }
+
 .footer {
   border-top: 1px solid #d6d6d6;
 }
@@ -278,8 +300,8 @@ body {
   .footer__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 20px;
   }
 }
@@ -304,8 +326,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 17px;
   gap: 10px;
 }
@@ -315,7 +337,7 @@ body {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 10px;
   }
 }
@@ -343,39 +365,18 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 30px;
 }
 @media (max-width: 478px) {
   .footer__socials {
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 .footer__socials img {
   width: 20px;
   height: 20px;
-}
-
-.loader {
-  display: none;
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #3498db;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  animation: spin 1s linear infinite;
-  margin: 0 auto;
-  margin-top: 20px;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }

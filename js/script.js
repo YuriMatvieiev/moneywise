@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var forms = document.querySelectorAll(".article__form");
   var mainForms = document.querySelectorAll(".article__main-form");
   var thankyous = document.querySelectorAll(".article__thankyou");
+  var loaders = document.querySelectorAll(".loader");
 
   var formSubmitted = localStorage.getItem("formSubmitted");
 
@@ -22,6 +23,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         var xhr = new XMLHttpRequest();
         xhr.open("POST", form.action, true);
+
+        // Show the loader
+        loaders.forEach(function (loader) {
+          loader.style.display = "block";
+        });
+
         xhr.onreadystatechange = function () {
           if (xhr.readyState === 4 && xhr.status === 200) {
             // Form submission successful
@@ -33,7 +40,18 @@ document.addEventListener("DOMContentLoaded", function () {
               thankyou.style.display = "block"; // Show the thank you message
             });
 
+            // Hide the loader
+            loaders.forEach(function (loader) {
+              loader.style.display = "none";
+            });
+
             localStorage.setItem("formSubmitted", true); // Set flag indicating form submission
+
+            // Additional code to execute after form submission
+            gtag("event", "conversion", {
+              send_to: "AW-11108113974/ZgcyCOnqp6wYELa84bAp",
+              transaction_id: "",
+            });
           }
         };
 
@@ -58,3 +76,14 @@ document.addEventListener("DOMContentLoaded", function () {
   };
   xhr.send();
 });
+
+// Get the current date
+var today = new Date();
+
+// Convert the date to the desired format
+var options = { year: "numeric", month: "long", day: "numeric" };
+var formattedDate = today.toLocaleDateString("en-US", options).toUpperCase();
+
+// Update the article__date element with the current date
+var dateElement = document.getElementById("currentDate");
+dateElement.textContent = formattedDate;

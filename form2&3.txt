@@ -1,0 +1,75 @@
+<form
+        class="article__form"
+        method="POST"
+        action="https://script.google.com/macros/s/AKfycbxOQboeaeLTsn9rtCpryXEzVriCpORjRuuh-S_mD0HpmeOgdFDQ_sU-2QInUlAqd0BBIw/exec"
+      >
+        <div class="article__main-form">
+          <h2>Get Free Email Updates!</h2>
+          <h4>Join us for FREE to get instant email updates!</h4>
+          <!-- name="first_name" do not change -->
+          <input
+            type="text"
+            placeholder="First Name"
+            name="first_name"
+            required
+          />
+          <!-- name="last_name" do not change -->
+          <input
+            type="text"
+            placeholder="Last Name"
+            name="last_name"
+            required
+          />
+          <!-- name="email" do not change -->
+          <input
+            type="email"
+            placeholder="Email Address"
+            name="email"
+            required
+          />
+          <!-- do not change IP line -->
+          <input type="hidden" name="ip" id="ip-input" />
+          <!-- value="site1" is what the "Custom" line in the table is, the table sheet should be named the same as what is in quotes  -->
+          <input type="hidden" name="custom" value="site1" id="custom-input" />
+          <button type="submit">Get Access Today!</button>
+
+        </div>
+        <div class="article__thankyou" style="display: none">THANK YOU!</div>
+      </form>
+      <form
+        class="article__form"
+        method="POST"
+        action="https://script.google.com/macros/s/AKfycbxOQboeaeLTsn9rtCpryXEzVriCpORjRuuh-S_mD0HpmeOgdFDQ_sU-2QInUlAqd0BBIw/exec"
+      >
+        <div class="article__main-form">
+          <h2>Get Free Email Updates!</h2>
+          <h4>Join us for FREE to get instant email updates!</h4>
+          <!-- name="first_name" do not change -->
+          <input
+            type="text"
+            placeholder="First Name"
+            name="first_name"
+            required
+          />
+          <!-- name="last_name" do not change -->
+          <input
+            type="text"
+            placeholder="Last Name"
+            name="last_name"
+            required
+          />
+          <!-- name="email" do not change -->
+          <input
+            type="email"
+            placeholder="Email Address"
+            name="email"
+            required
+          />
+          <!-- do not change IP line -->
+          <input type="hidden" name="ip" id="ip-input" />
+          <!-- value="site1" is what the "Custom" line in the table is, the table sheet should be named the same as what is in quotes  -->
+          <input type="hidden" name="custom" value="site1" id="custom-input" />
+          <button type="submit">Get Access Today!</button>
+        </div>
+        <div class="article__thankyou" style="display: none">THANK YOU!</div>
+      </form>
