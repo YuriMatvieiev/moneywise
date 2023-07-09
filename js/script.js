@@ -18,8 +18,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   } else {
     forms.forEach(function (form) {
+      var submitButton = form.querySelector("button[type='submit']");
+
       form.addEventListener("submit", function (event) {
         event.preventDefault(); // Prevent the form from submitting normally
+
+        if (submitButton.disabled) {
+          return; // Do nothing if the button is disabled
+        }
+
+        submitButton.disabled = true; // Disable the submit button
 
         var xhr = new XMLHttpRequest();
         xhr.open("POST", form.action, true);
@@ -48,10 +56,10 @@ document.addEventListener("DOMContentLoaded", function () {
             localStorage.setItem("formSubmitted", true); // Set flag indicating form submission
 
             // Additional code to execute after form submission
-            gtag("event", "conversion", {
-              send_to: "AW-11108113974/ZgcyCOnqp6wYELa84bAp",
+            /* gtag("event", "conversion", {
+              send_to: "AW-11129291846/bXvgCM61760YEMaI7rop",
               transaction_id: "",
-            });
+            }); */
           }
         };
 
